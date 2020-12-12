@@ -94,7 +94,7 @@ void main() {
         "Make sure that really fast Uuid.randomUuid doesn't produce duplicates",
         () {
       final List<Uuid> list =
-          List<Uuid>.filled(10000, null).map((_) => Uuid.randomUuid()).toList();
+          List<Uuid?>.filled(10000, null).map((_) => Uuid.randomUuid()).toList();
       final Set<Uuid> setList = list.toSet();
       expect(list.length, equals(setList.length));
     });

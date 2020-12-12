@@ -6,7 +6,7 @@ import 'dart:typed_data';
 class UuidUtil {
   /// Math.Random()-based RNG. All platforms, fast, not cryptographically strong. Optional Seed passable.
   static Uint8List mathRNG({int seed = -1}) {
-    int rand;
+    late int rand;
     final Uint8List b = Uint8List(16);
 
     final Random _rand = (seed == -1) ? Random() : Random(seed);

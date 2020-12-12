@@ -7,11 +7,15 @@ authors:
   - TruongSinh Tran-Nguyen <i@truongsinh.pro>
 homepage: https://github.com/truongsinh/dart-uuid
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: '>=2.12.0-0 <3.0.0'
 dependencies:
   crypto: ">=2.0.0 <3.0.0"
-  convert: ">=2.0.0 <3.0.0"
-  collection: "^1.14.11"
+  convert: ^3.0.0-nullsafety
+  collection: ^1.15.0-nullsafety
 dev_dependencies:
-  perfectionist: "^2.0.0"
-  test: any
+  pedantic: ^1.10.0-nullsafety
+  test: ^1.16.0-nullsafety
+dependency_overrides:
+  convert: ^3.0.0-nullsafety
+  crypto:
+    git: https://github.com/dart-lang/crypto.git
